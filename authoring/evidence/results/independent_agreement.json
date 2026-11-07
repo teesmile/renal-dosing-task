@@ -1,0 +1,276 @@
+{
+  "compared": [
+    "tests/ground_truth.json",
+    "solution/solve.py",
+    "authoring/evidence/independent_sqlite.py"
+  ],
+  "rule": "CrCl identical at 0.1 mL/min and flagged sets identical",
+  "patients": [
+    {
+      "patient_id": "PT001",
+      "crcl_ml_min": {
+        "ground_truth": 98.4,
+        "solve_py": 98.4,
+        "independent_sqlite": 98.4
+      },
+      "flagged_order_ids": {
+        "ground_truth": [
+          "RX8233"
+        ],
+        "solve_py": [
+          "RX8233"
+        ],
+        "independent_sqlite": [
+          "RX8233"
+        ]
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT002",
+      "crcl_ml_min": {
+        "ground_truth": 32.5,
+        "solve_py": 32.5,
+        "independent_sqlite": 32.5
+      },
+      "flagged_order_ids": {
+        "ground_truth": [
+          "RX1560"
+        ],
+        "solve_py": [
+          "RX1560"
+        ],
+        "independent_sqlite": [
+          "RX1560"
+        ]
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT003",
+      "crcl_ml_min": {
+        "ground_truth": 109.4,
+        "solve_py": 109.4,
+        "independent_sqlite": 109.4
+      },
+      "flagged_order_ids": {
+        "ground_truth": [],
+        "solve_py": [],
+        "independent_sqlite": []
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT004",
+      "crcl_ml_min": {
+        "ground_truth": 123.9,
+        "solve_py": 123.9,
+        "independent_sqlite": 123.9
+      },
+      "flagged_order_ids": {
+        "ground_truth": [],
+        "solve_py": [],
+        "independent_sqlite": []
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT005",
+      "crcl_ml_min": {
+        "ground_truth": 47.1,
+        "solve_py": 47.1,
+        "independent_sqlite": 47.1
+      },
+      "flagged_order_ids": {
+        "ground_truth": [
+          "RX6102"
+        ],
+        "solve_py": [
+          "RX6102"
+        ],
+        "independent_sqlite": [
+          "RX6102"
+        ]
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT006",
+      "crcl_ml_min": {
+        "ground_truth": 78.0,
+        "solve_py": 78.0,
+        "independent_sqlite": 78.0
+      },
+      "flagged_order_ids": {
+        "ground_truth": [
+          "RX2058"
+        ],
+        "solve_py": [
+          "RX2058"
+        ],
+        "independent_sqlite": [
+          "RX2058"
+        ]
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT007",
+      "crcl_ml_min": {
+        "ground_truth": 152.2,
+        "solve_py": 152.2,
+        "independent_sqlite": 152.2
+      },
+      "flagged_order_ids": {
+        "ground_truth": [],
+        "solve_py": [],
+        "independent_sqlite": []
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT008",
+      "crcl_ml_min": {
+        "ground_truth": 64.0,
+        "solve_py": 64.0,
+        "independent_sqlite": 64.0
+      },
+      "flagged_order_ids": {
+        "ground_truth": [],
+        "solve_py": [],
+        "independent_sqlite": []
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT009",
+      "crcl_ml_min": {
+        "ground_truth": 78.2,
+        "solve_py": 78.2,
+        "independent_sqlite": 78.2
+      },
+      "flagged_order_ids": {
+        "ground_truth": [],
+        "solve_py": [],
+        "independent_sqlite": []
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT010",
+      "crcl_ml_min": {
+        "ground_truth": 27.0,
+        "solve_py": 27.0,
+        "independent_sqlite": 27.0
+      },
+      "flagged_order_ids": {
+        "ground_truth": [
+          "RX5724"
+        ],
+        "solve_py": [
+          "RX5724"
+        ],
+        "independent_sqlite": [
+          "RX5724"
+        ]
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT011",
+      "crcl_ml_min": {
+        "ground_truth": 99.3,
+        "solve_py": 99.3,
+        "independent_sqlite": 99.3
+      },
+      "flagged_order_ids": {
+        "ground_truth": [
+          "RX7981"
+        ],
+        "solve_py": [
+          "RX7981"
+        ],
+        "independent_sqlite": [
+          "RX7981"
+        ]
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT012",
+      "crcl_ml_min": {
+        "ground_truth": 100.0,
+        "solve_py": 100.0,
+        "independent_sqlite": 100.0
+      },
+      "flagged_order_ids": {
+        "ground_truth": [],
+        "solve_py": [],
+        "independent_sqlite": []
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT013",
+      "crcl_ml_min": {
+        "ground_truth": 55.1,
+        "solve_py": 55.1,
+        "independent_sqlite": 55.1
+      },
+      "flagged_order_ids": {
+        "ground_truth": [
+          "RX4803"
+        ],
+        "solve_py": [
+          "RX4803"
+        ],
+        "independent_sqlite": [
+          "RX4803"
+        ]
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT014",
+      "crcl_ml_min": {
+        "ground_truth": 23.0,
+        "solve_py": 23.0,
+        "independent_sqlite": 23.0
+      },
+      "flagged_order_ids": {
+        "ground_truth": [
+          "RX4887"
+        ],
+        "solve_py": [
+          "RX4887"
+        ],
+        "independent_sqlite": [
+          "RX4887"
+        ]
+      },
+      "agree": true
+    },
+    {
+      "patient_id": "PT015",
+      "crcl_ml_min": {
+        "ground_truth": 11.4,
+        "solve_py": 11.4,
+        "independent_sqlite": 11.4
+      },
+      "flagged_order_ids": {
+        "ground_truth": [
+          "RX8323"
+        ],
+        "solve_py": [
+          "RX8323"
+        ],
+        "independent_sqlite": [
+          "RX8323"
+        ]
+      },
+      "agree": true
+    }
+  ],
+  "all_agree": true,
+  "problems": []
+}

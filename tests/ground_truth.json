@@ -1,0 +1,91 @@
+{
+  "_notice": "Fictional drugs and limits; not clinical guidance.",
+  "source": "solution/solve.py run on environment/ by authoring/build_ground_truth.py",
+  "input_sha256": {
+    "patients.csv": "d4103aa0058601ea98ffcae15bc9b453e6073d513ce844b2af842fb761dbcfe2",
+    "labs.csv": "1a4ba09bf59b0898f85a3a6c9f11f61d687caf5a1b8eb679eda5b003bc1c6c14",
+    "meds.csv": "ddfcc3406fe1794dd086339883ec7f49493ecf936f832e2e95e4e7a6c8e45bac",
+    "rules.json": "a5e71609331c5a9a0756ca39f02f7d536f514feed561afe735bbae216c18e58b"
+  },
+  "crcl_rel_tolerance": 0.01,
+  "patients": {
+    "PT001": {
+      "crcl_ml_min": 98.4,
+      "flagged_order_ids": [
+        "RX8233"
+      ]
+    },
+    "PT002": {
+      "crcl_ml_min": 32.5,
+      "flagged_order_ids": [
+        "RX1560"
+      ]
+    },
+    "PT003": {
+      "crcl_ml_min": 109.4,
+      "flagged_order_ids": []
+    },
+    "PT004": {
+      "crcl_ml_min": 123.9,
+      "flagged_order_ids": []
+    },
+    "PT005": {
+      "crcl_ml_min": 47.1,
+      "flagged_order_ids": [
+        "RX6102"
+      ]
+    },
+    "PT006": {
+      "crcl_ml_min": 78.0,
+      "flagged_order_ids": [
+        "RX2058"
+      ]
+    },
+    "PT007": {
+      "crcl_ml_min": 152.2,
+      "flagged_order_ids": []
+    },
+    "PT008": {
+      "crcl_ml_min": 64.0,
+      "flagged_order_ids": []
+    },
+    "PT009": {
+      "crcl_ml_min": 78.2,
+      "flagged_order_ids": []
+    },
+    "PT010": {
+      "crcl_ml_min": 27.0,
+      "flagged_order_ids": [
+        "RX5724"
+      ]
+    },
+    "PT011": {
+      "crcl_ml_min": 99.3,
+      "flagged_order_ids": [
+        "RX7981"
+      ]
+    },
+    "PT012": {
+      "crcl_ml_min": 100.0,
+      "flagged_order_ids": []
+    },
+    "PT013": {
+      "crcl_ml_min": 55.1,
+      "flagged_order_ids": [
+        "RX4803"
+      ]
+    },
+    "PT014": {
+      "crcl_ml_min": 23.0,
+      "flagged_order_ids": [
+        "RX4887"
+      ]
+    },
+    "PT015": {
+      "crcl_ml_min": 11.4,
+      "flagged_order_ids": [
+        "RX8323"
+      ]
+    }
+  }
+}

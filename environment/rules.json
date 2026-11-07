@@ -1,0 +1,102 @@
+{
+  "_notice": "FICTIONAL. These drugs and limits were invented for a software benchmark. They are not real medicines and this is not clinical guidance.",
+  "band_semantics": "crcl_min <= CrCl_mL_min < crcl_max; null bound = unbounded",
+  "dose_unit": "mg/day",
+  "drugs": {
+    "Aldrovexin": [
+      {
+        "crcl_min": 60,
+        "crcl_max": null,
+        "max_daily_dose_mg": 3000
+      },
+      {
+        "crcl_min": 30,
+        "crcl_max": 60,
+        "max_daily_dose_mg": 1500
+      },
+      {
+        "crcl_min": 15,
+        "crcl_max": 30,
+        "max_daily_dose_mg": 750
+      },
+      {
+        "crcl_min": null,
+        "crcl_max": 15,
+        "max_daily_dose_mg": 0
+      }
+    ],
+    "Bremazotan": [
+      {
+        "crcl_min": 50,
+        "crcl_max": null,
+        "max_daily_dose_mg": 400
+      },
+      {
+        "crcl_min": 25,
+        "crcl_max": 50,
+        "max_daily_dose_mg": 200
+      },
+      {
+        "crcl_min": null,
+        "crcl_max": 25,
+        "max_daily_dose_mg": 100
+      }
+    ],
+    "Cylvarone": [
+      {
+        "crcl_min": 90,
+        "crcl_max": null,
+        "max_daily_dose_mg": 1200
+      },
+      {
+        "crcl_min": 45,
+        "crcl_max": 90,
+        "max_daily_dose_mg": 900
+      },
+      {
+        "crcl_min": 20,
+        "crcl_max": 45,
+        "max_daily_dose_mg": 450
+      },
+      {
+        "crcl_min": null,
+        "crcl_max": 20,
+        "max_daily_dose_mg": 0
+      }
+    ],
+    "Dorvatinex": [
+      {
+        "crcl_min": 40,
+        "crcl_max": null,
+        "max_daily_dose_mg": 60
+      },
+      {
+        "crcl_min": 10,
+        "crcl_max": 40,
+        "max_daily_dose_mg": 30
+      },
+      {
+        "crcl_min": null,
+        "crcl_max": 10,
+        "max_daily_dose_mg": 0
+      }
+    ],
+    "Exalmizide": [
+      {
+        "crcl_min": 70,
+        "crcl_max": null,
+        "max_daily_dose_mg": 2000
+      },
+      {
+        "crcl_min": 35,
+        "crcl_max": 70,
+        "max_daily_dose_mg": 1000
+      },
+      {
+        "crcl_min": null,
+        "crcl_max": 35,
+        "max_daily_dose_mg": 500
+      }
+    ]
+  }
+}

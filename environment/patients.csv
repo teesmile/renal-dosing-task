@@ -1,0 +1,16 @@
+patient_id,age_years,sex,weight,weight_unit
+PT001,54,M,82,kg
+PT002,67,F,64,kg
+PT003,45,M,91,kg
+PT004,90,F,38,kg
+PT005,72,M,176,lb
+PT006,58,F,231,lb
+PT007,45,M,150,kg
+PT008,61,M,70,kg
+PT009,39,F,59,kg
+PT010,80,M,68,kg
+PT011,33,F,55,kg
+PT012,50,M,88,kg
+PT013,70,F,60,kg
+PT014,77,M,209,lb
+PT015,85,F,49,kg

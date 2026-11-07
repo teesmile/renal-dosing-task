@@ -1,0 +1,140 @@
+[
+  {
+    "patient_id": "PT001",
+    "family": "creatinine_unit",
+    "note": "µmol/L creatinine; Exalmizide over limit at any sane CrCl",
+    "order_ids": [
+      "RX7230",
+      "RX8233"
+    ]
+  },
+  {
+    "patient_id": "PT002",
+    "family": "creatinine_unit",
+    "note": "TRAP µmol/L read as mg/dL drops CrCl to ~0.4 and flags Cylvarone",
+    "order_ids": [
+      "RX1560",
+      "RX3455"
+    ]
+  },
+  {
+    "patient_id": "PT003",
+    "family": "creatinine_unit",
+    "note": "µmol/L; misread flags both orders that are actually fine",
+    "order_ids": [
+      "RX6117",
+      "RX4995"
+    ]
+  },
+  {
+    "patient_id": "PT004",
+    "family": "creatinine_unit",
+    "note": "LOOK-ALIKE: 16 µmol/L (frail, sarcopenic) looks like an ESRD mg/dL value",
+    "order_ids": [
+      "RX4564",
+      "RX2169"
+    ]
+  },
+  {
+    "patient_id": "PT005",
+    "family": "weight_unit",
+    "note": "TRAP lb read as kg lifts CrCl past 50 and hides the flag",
+    "order_ids": [
+      "RX6102"
+    ]
+  },
+  {
+    "patient_id": "PT006",
+    "family": "weight_unit",
+    "note": "lb; misread lifts CrCl past 90 and hides the Cylvarone flag",
+    "order_ids": [
+      "RX2058",
+      "RX3464"
+    ]
+  },
+  {
+    "patient_id": "PT007",
+    "family": "weight_unit",
+    "note": "LOOK-ALIKE: genuine 150 kg; a 'big number must be lb' rule flags Cylvarone",
+    "order_ids": [
+      "RX4493",
+      "RX7563",
+      "RX2229"
+    ]
+  },
+  {
+    "patient_id": "PT008",
+    "family": "order_status",
+    "note": "TRAP discontinued 3500 mg order exceeds limit; active ones do not",
+    "order_ids": [
+      "RX5633",
+      "RX4062",
+      "RX6426"
+    ]
+  },
+  {
+    "patient_id": "PT009",
+    "family": "frequency",
+    "note": "TRAP q8h = 3/day (not 8); q12h = 2/day",
+    "order_ids": [
+      "RX3742",
+      "RX4864"
+    ]
+  },
+  {
+    "patient_id": "PT010",
+    "family": "frequency",
+    "note": "TRAP BD = 2/day -> 1000 mg > 750",
+    "order_ids": [
+      "RX5724",
+      "RX3857"
+    ]
+  },
+  {
+    "patient_id": "PT011",
+    "family": "frequency",
+    "note": "TRAP TDS = 3/day -> 1350 mg > 1200",
+    "order_ids": [
+      "RX7981",
+      "RX1434"
+    ]
+  },
+  {
+    "patient_id": "PT012",
+    "family": "latest_lab",
+    "note": "TRAP older AKI creatinine 2.6 is listed after the recovered 1.1 in labs.csv",
+    "order_ids": [
+      "RX2237",
+      "RX9423"
+    ]
+  },
+  {
+    "patient_id": "PT013",
+    "family": "limit_boundary",
+    "note": "TRAP Exalmizide 1000 mg/day equals the 1000 limit: not exceeding",
+    "order_ids": [
+      "RX9491",
+      "RX4803"
+    ]
+  },
+  {
+    "patient_id": "PT014",
+    "family": "weight_unit",
+    "note": "lb; low CrCl band",
+    "order_ids": [
+      "RX4887",
+      "RX2018",
+      "RX7986"
+    ]
+  },
+  {
+    "patient_id": "PT015",
+    "family": "control",
+    "note": "no trap; CrCl ~11",
+    "order_ids": [
+      "RX9504",
+      "RX1787",
+      "RX8323"
+    ]
+  }
+]

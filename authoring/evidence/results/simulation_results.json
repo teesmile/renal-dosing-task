@@ -1,0 +1,720 @@
+{
+  "results": [
+    {
+      "name": "reference",
+      "family": "none",
+      "description": "solution/solve.py",
+      "expect_pass": true,
+      "passed": true,
+      "failed_tests": 0,
+      "pytest": "32 passed in 0.02s",
+      "changed_patients": {}
+    },
+    {
+      "name": "baseline",
+      "family": "none",
+      "description": "simulator with no mistakes",
+      "expect_pass": true,
+      "passed": true,
+      "failed_tests": 0,
+      "pytest": "32 passed in 0.01s",
+      "changed_patients": {}
+    },
+    {
+      "name": "legit_factor_88_42",
+      "family": "none",
+      "description": "µmol/L→mg/dL factor 88.42 instead of 88.4",
+      "expect_pass": true,
+      "passed": true,
+      "failed_tests": 0,
+      "pytest": "32 passed in 0.01s",
+      "changed_patients": {}
+    },
+    {
+      "name": "legit_lb_2_2",
+      "family": "none",
+      "description": "lb→kg as ÷2.2",
+      "expect_pass": true,
+      "passed": true,
+      "failed_tests": 0,
+      "pytest": "32 passed in 0.01s",
+      "changed_patients": {}
+    },
+    {
+      "name": "legit_lb_2_2046",
+      "family": "none",
+      "description": "lb→kg as ÷2.2046",
+      "expect_pass": true,
+      "passed": true,
+      "failed_tests": 0,
+      "pytest": "32 passed in 0.01s",
+      "changed_patients": {}
+    },
+    {
+      "name": "legit_round_inputs",
+      "family": "none",
+      "description": "round kg to 0.1 and SCr to 0.01 mg/dL before CG",
+      "expect_pass": true,
+      "passed": true,
+      "failed_tests": 0,
+      "pytest": "32 passed in 0.01s",
+      "changed_patients": {}
+    },
+    {
+      "name": "legit_band_on_rounded",
+      "family": "none",
+      "description": "choose band from CrCl rounded to 0.1",
+      "expect_pass": true,
+      "passed": true,
+      "failed_tests": 0,
+      "pytest": "32 passed in 0.01s",
+      "changed_patients": {}
+    },
+    {
+      "name": "legit_unsorted_ids",
+      "family": "none",
+      "description": "flagged ids emitted in file order, not sorted",
+      "expect_pass": true,
+      "passed": true,
+      "failed_tests": 0,
+      "pytest": "32 passed in 0.01s",
+      "changed_patients": {}
+    },
+    {
+      "name": "cr_umol_as_mgdl",
+      "family": "creatinine_unit",
+      "description": "ignores creatinine_unit; every value read as mg/dL",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 8,
+      "pytest": "8 failed, 24 passed in 0.03s",
+      "changed_patients": {
+        "PT001": {
+          "crcl": [
+            98.4,
+            1.1
+          ],
+          "flags": [
+            [
+              "RX8233"
+            ],
+            [
+              "RX7230",
+              "RX8233"
+            ]
+          ]
+        },
+        "PT002": {
+          "crcl": [
+            32.5,
+            0.4
+          ],
+          "flags": [
+            [
+              "RX1560"
+            ],
+            [
+              "RX1560",
+              "RX3455"
+            ]
+          ]
+        },
+        "PT003": {
+          "crcl": [
+            109.4,
+            1.2
+          ],
+          "flags": [
+            [],
+            [
+              "RX4995",
+              "RX6117"
+            ]
+          ]
+        },
+        "PT004": {
+          "crcl": [
+            123.9,
+            1.4
+          ],
+          "flags": [
+            [],
+            [
+              "RX2169",
+              "RX4564"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "cr_unit_by_magnitude",
+      "family": "creatinine_unit",
+      "description": "blanket rule: creatinine < 20 is mg/dL, otherwise µmol/L (ignores unit column)",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 2,
+      "pytest": "2 failed, 30 passed in 0.02s",
+      "changed_patients": {
+        "PT004": {
+          "crcl": [
+            123.9,
+            1.4
+          ],
+          "flags": [
+            [],
+            [
+              "RX2169",
+              "RX4564"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "weight_lb_as_kg",
+      "family": "weight_unit",
+      "description": "ignores weight_unit; every value read as kg",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 6,
+      "pytest": "6 failed, 26 passed in 0.03s",
+      "changed_patients": {
+        "PT005": {
+          "crcl": [
+            47.1,
+            103.9
+          ],
+          "flags": [
+            [
+              "RX6102"
+            ],
+            []
+          ]
+        },
+        "PT006": {
+          "crcl": [
+            78.0,
+            172.0
+          ],
+          "flags": [
+            [
+              "RX2058"
+            ],
+            []
+          ]
+        },
+        "PT014": {
+          "crcl": [
+            23.0,
+            50.8
+          ],
+          "flags": [
+            [
+              "RX4887"
+            ],
+            []
+          ]
+        }
+      }
+    },
+    {
+      "name": "weight_unit_by_magnitude",
+      "family": "weight_unit",
+      "description": "blanket rule: weight > 140 must be lb (ignores unit column)",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 2,
+      "pytest": "2 failed, 30 passed in 0.02s",
+      "changed_patients": {
+        "PT007": {
+          "crcl": [
+            152.2,
+            69.1
+          ],
+          "flags": [
+            [],
+            [
+              "RX2229"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "count_discontinued",
+      "family": "order_status",
+      "description": "checks discontinued orders as if active",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 1,
+      "pytest": "1 failed, 31 passed in 0.02s",
+      "changed_patients": {
+        "PT008": {
+          "crcl": null,
+          "flags": [
+            [],
+            [
+              "RX5633"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "freq_qNh_as_count",
+      "family": "frequency",
+      "description": "reads qNh as N doses per day (q8h -> 8)",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 1,
+      "pytest": "1 failed, 31 passed in 0.02s",
+      "changed_patients": {
+        "PT009": {
+          "crcl": null,
+          "flags": [
+            [],
+            [
+              "RX3742",
+              "RX4864"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "freq_bd_as_once",
+      "family": "frequency",
+      "description": "reads BD as once daily",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 1,
+      "pytest": "1 failed, 31 passed in 0.02s",
+      "changed_patients": {
+        "PT010": {
+          "crcl": null,
+          "flags": [
+            [
+              "RX5724"
+            ],
+            []
+          ]
+        }
+      }
+    },
+    {
+      "name": "freq_tds_as_twice",
+      "family": "frequency",
+      "description": "reads TDS as twice daily",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 1,
+      "pytest": "1 failed, 31 passed in 0.02s",
+      "changed_patients": {
+        "PT011": {
+          "crcl": null,
+          "flags": [
+            [
+              "RX7981"
+            ],
+            []
+          ]
+        }
+      }
+    },
+    {
+      "name": "lab_last_row_wins",
+      "family": "latest_lab",
+      "description": "uses the last creatinine row in file order, not the latest time",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 2,
+      "pytest": "2 failed, 30 passed in 0.02s",
+      "changed_patients": {
+        "PT012": {
+          "crcl": [
+            100.0,
+            42.3
+          ],
+          "flags": [
+            [],
+            [
+              "RX2237",
+              "RX9423"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "flag_at_limit",
+      "family": "limit_boundary",
+      "description": "flags daily dose >= limit instead of > limit",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 1,
+      "pytest": "1 failed, 31 passed in 0.02s",
+      "changed_patients": {
+        "PT013": {
+          "crcl": null,
+          "flags": [
+            [
+              "RX4803"
+            ],
+            [
+              "RX4803",
+              "RX9491"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "name": "no_output_file",
+      "family": "malformed",
+      "description": "output file never written",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 32,
+      "pytest": "32 errors in 0.12s",
+      "changed_patients": null
+    },
+    {
+      "name": "empty_output",
+      "family": "malformed",
+      "description": "output file exists but is empty",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 31,
+      "pytest": "31 failed, 1 passed in 0.08s",
+      "changed_patients": null
+    },
+    {
+      "name": "drop_one_patient",
+      "family": "malformed",
+      "description": "one patient's line missing",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 3,
+      "pytest": "3 failed, 29 passed in 0.04s",
+      "changed_patients": null
+    },
+    {
+      "name": "duplicate_patient",
+      "family": "malformed",
+      "description": "one patient written twice",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 32,
+      "pytest": "32 errors in 0.11s",
+      "changed_patients": null
+    },
+    {
+      "name": "extra_patient",
+      "family": "malformed",
+      "description": "a patient id that is not in the chart",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 1,
+      "pytest": "1 failed, 31 passed in 0.03s",
+      "changed_patients": null
+    },
+    {
+      "name": "crcl_unrounded",
+      "family": "malformed",
+      "description": "CrCl written with full float precision",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 1,
+      "pytest": "1 failed, 31 passed in 0.03s",
+      "changed_patients": null
+    },
+    {
+      "name": "crcl_as_string",
+      "family": "malformed",
+      "description": "CrCl written as a JSON string",
+      "expect_pass": false,
+      "passed": false,
+      "failed_tests": 2,
+      "pytest": "2 failed, 30 passed in 0.04s",
+      "changed_patients": null
+    }
+  ],
+  "families_by_patient": {
+    "PT001": [
+      "creatinine_unit"
+    ],
+    "PT002": [
+      "creatinine_unit"
+    ],
+    "PT003": [
+      "creatinine_unit"
+    ],
+    "PT004": [
+      "creatinine_unit"
+    ],
+    "PT005": [
+      "weight_unit"
+    ],
+    "PT006": [
+      "weight_unit"
+    ],
+    "PT007": [
+      "weight_unit"
+    ],
+    "PT008": [
+      "order_status"
+    ],
+    "PT009": [
+      "frequency"
+    ],
+    "PT010": [
+      "frequency"
+    ],
+    "PT011": [
+      "frequency"
+    ],
+    "PT012": [
+      "latest_lab"
+    ],
+    "PT013": [
+      "limit_boundary"
+    ],
+    "PT014": [
+      "weight_unit"
+    ]
+  },
+  "design": {
+    "PT001": {
+      "patient_id": "PT001",
+      "family": "creatinine_unit",
+      "note": "µmol/L creatinine; Exalmizide over limit at any sane CrCl",
+      "order_ids": [
+        "RX7230",
+        "RX8233"
+      ]
+    },
+    "PT002": {
+      "patient_id": "PT002",
+      "family": "creatinine_unit",
+      "note": "TRAP µmol/L read as mg/dL drops CrCl to ~0.4 and flags Cylvarone",
+      "order_ids": [
+        "RX1560",
+        "RX3455"
+      ]
+    },
+    "PT003": {
+      "patient_id": "PT003",
+      "family": "creatinine_unit",
+      "note": "µmol/L; misread flags both orders that are actually fine",
+      "order_ids": [
+        "RX6117",
+        "RX4995"
+      ]
+    },
+    "PT004": {
+      "patient_id": "PT004",
+      "family": "creatinine_unit",
+      "note": "LOOK-ALIKE: 16 µmol/L (frail, sarcopenic) looks like an ESRD mg/dL value",
+      "order_ids": [
+        "RX4564",
+        "RX2169"
+      ]
+    },
+    "PT005": {
+      "patient_id": "PT005",
+      "family": "weight_unit",
+      "note": "TRAP lb read as kg lifts CrCl past 50 and hides the flag",
+      "order_ids": [
+        "RX6102"
+      ]
+    },
+    "PT006": {
+      "patient_id": "PT006",
+      "family": "weight_unit",
+      "note": "lb; misread lifts CrCl past 90 and hides the Cylvarone flag",
+      "order_ids": [
+        "RX2058",
+        "RX3464"
+      ]
+    },
+    "PT007": {
+      "patient_id": "PT007",
+      "family": "weight_unit",
+      "note": "LOOK-ALIKE: genuine 150 kg; a 'big number must be lb' rule flags Cylvarone",
+      "order_ids": [
+        "RX4493",
+        "RX7563",
+        "RX2229"
+      ]
+    },
+    "PT008": {
+      "patient_id": "PT008",
+      "family": "order_status",
+      "note": "TRAP discontinued 3500 mg order exceeds limit; active ones do not",
+      "order_ids": [
+        "RX5633",
+        "RX4062",
+        "RX6426"
+      ]
+    },
+    "PT009": {
+      "patient_id": "PT009",
+      "family": "frequency",
+      "note": "TRAP q8h = 3/day (not 8); q12h = 2/day",
+      "order_ids": [
+        "RX3742",
+        "RX4864"
+      ]
+    },
+    "PT010": {
+      "patient_id": "PT010",
+      "family": "frequency",
+      "note": "TRAP BD = 2/day -> 1000 mg > 750",
+      "order_ids": [
+        "RX5724",
+        "RX3857"
+      ]
+    },
+    "PT011": {
+      "patient_id": "PT011",
+      "family": "frequency",
+      "note": "TRAP TDS = 3/day -> 1350 mg > 1200",
+      "order_ids": [
+        "RX7981",
+        "RX1434"
+      ]
+    },
+    "PT012": {
+      "patient_id": "PT012",
+      "family": "latest_lab",
+      "note": "TRAP older AKI creatinine 2.6 is listed after the recovered 1.1 in labs.csv",
+      "order_ids": [
+        "RX2237",
+        "RX9423"
+      ]
+    },
+    "PT013": {
+      "patient_id": "PT013",
+      "family": "limit_boundary",
+      "note": "TRAP Exalmizide 1000 mg/day equals the 1000 limit: not exceeding",
+      "order_ids": [
+        "RX9491",
+        "RX4803"
+      ]
+    },
+    "PT014": {
+      "patient_id": "PT014",
+      "family": "weight_unit",
+      "note": "lb; low CrCl band",
+      "order_ids": [
+        "RX4887",
+        "RX2018",
+        "RX7986"
+      ]
+    },
+    "PT015": {
+      "patient_id": "PT015",
+      "family": "control",
+      "note": "no trap; CrCl ~11",
+      "order_ids": [
+        "RX9504",
+        "RX1787",
+        "RX8323"
+      ]
+    }
+  },
+  "band_edge_margins": [
+    {
+      "patient_id": "PT001",
+      "crcl": 98.4,
+      "nearest_edge": 70,
+      "margin": 0.4057
+    },
+    {
+      "patient_id": "PT002",
+      "crcl": 32.5,
+      "nearest_edge": 25,
+      "margin": 0.3
+    },
+    {
+      "patient_id": "PT003",
+      "crcl": 109.4,
+      "nearest_edge": 60,
+      "margin": 0.8233
+    },
+    {
+      "patient_id": "PT004",
+      "crcl": 123.9,
+      "nearest_edge": 90,
+      "margin": 0.3767
+    },
+    {
+      "patient_id": "PT005",
+      "crcl": 47.1,
+      "nearest_edge": 50,
+      "margin": 0.058
+    },
+    {
+      "patient_id": "PT006",
+      "crcl": 78.0,
+      "nearest_edge": 70,
+      "margin": 0.1143
+    },
+    {
+      "patient_id": "PT007",
+      "crcl": 152.2,
+      "nearest_edge": 90,
+      "margin": 0.6911
+    },
+    {
+      "patient_id": "PT008",
+      "crcl": 64.0,
+      "nearest_edge": 60,
+      "margin": 0.0667
+    },
+    {
+      "patient_id": "PT009",
+      "crcl": 78.2,
+      "nearest_edge": 70,
+      "margin": 0.1171
+    },
+    {
+      "patient_id": "PT010",
+      "crcl": 27.0,
+      "nearest_edge": 25,
+      "margin": 0.08
+    },
+    {
+      "patient_id": "PT011",
+      "crcl": 99.3,
+      "nearest_edge": 90,
+      "margin": 0.1033
+    },
+    {
+      "patient_id": "PT012",
+      "crcl": 100.0,
+      "nearest_edge": 90,
+      "margin": 0.1111
+    },
+    {
+      "patient_id": "PT013",
+      "crcl": 55.1,
+      "nearest_edge": 50,
+      "margin": 0.102
+    },
+    {
+      "patient_id": "PT014",
+      "crcl": 23.0,
+      "nearest_edge": 20,
+      "margin": 0.15
+    },
+    {
+      "patient_id": "PT015",
+      "crcl": 11.4,
+      "nearest_edge": 10,
+      "margin": 0.14
+    }
+  ],
+  "problems": []
+}
